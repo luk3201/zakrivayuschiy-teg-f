@@ -1,1 +1,1 @@
-https://github.com/luk3201/slozhno-sosredotochitsya-fd.git
+https://github.com/luk3201/zakrivayuschiy-teg-f.git
