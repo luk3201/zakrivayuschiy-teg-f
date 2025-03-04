@@ -34,7 +34,7 @@
 }
 
 .stretch {
-  inline-size: clamp(375px,99%,700px);
+  max-inline-size: clamp(375px,99%,700px);
 }
 
 .header__block {
@@ -43,7 +43,7 @@
   text-align: center;
   justify-content: center;
   gap: 20px;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   color: var(--main-style-color);
 }
 
@@ -133,7 +133,7 @@
   position: absolute;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   color: var(--main-style-color);
   font-weight: var(--width-main-font-normal, 400);
   font-size: var(--main-font-size-small, 14px);
@@ -141,7 +141,7 @@
   letter-spacing: 0%;
   text-shadow: -1px 0 var(--text-stroke-color, #fff), 0 1px var(--text-stroke-color, #fff), 1px 0 var(--text-stroke-color, #fff), 0 -1px var(--text-stroke-color, #fff);
   top: 25px;
-  right: 10px;
+  right: 25px;
   mix-blend-mode: hard-light;
 }
 
@@ -204,7 +204,7 @@
 }
 
 .card__like-button {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: var(--main-font-size-small, 14px);
   inline-size: 130px;
   block-size: 38px;
@@ -243,7 +243,7 @@
 .button__text {
   position: relative;
   z-index: 1;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: var(--main-font-size-small, 14px);
   line-height: 12.6px;
   text-wrap: nowrap;
@@ -254,11 +254,8 @@
 /* DIALOG */
 .dialog {
   inline-size: 357px;
-  block-size: 192px;
   padding: 30px;
-  position: fixed;
   border: 2px solid #000;
-  inset: 0;
 }
 
 .dialog[open] {
@@ -275,7 +272,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   text-transform: uppercase;
 }
 
@@ -293,7 +290,7 @@
 }
 
 .dialog__button {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: var(--main-font-size-small, 14px);
   font-weight: var(--width-main-font-normal, 400);
   text-transform: uppercase;
@@ -301,6 +298,7 @@
   letter-spacing: 0%;
   inline-size: 293px;
   block-size: 38px;
+  inline-size: 100%;
 }
 /* DIALOG */
 
@@ -318,6 +316,10 @@
     margin-bottom: 50px;
   }
 
+  .card__image_span {
+    right: 13px;
+  }
+
   .save__button {
     inline-size: 310px;
     block-size: 84px;
@@ -333,16 +335,8 @@
   }
 
   .dialog {
-    width: 341px;
-    padding-inline: auto;
-  }
-
-  .dialog_content {
-    inline-size: 257px;
-  }
-
-  .dialog__button {
-    inline-size: 253px;
+    inline-size: 341px;
+    padding-inline: 39px;
   }
 }
 /* WIDTH<=375 */
