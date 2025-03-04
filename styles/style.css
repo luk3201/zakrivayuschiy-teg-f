@@ -38,7 +38,6 @@
 }
 
 .header__block {
-  block-size: 364px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -49,10 +48,12 @@
 }
 
 .header__title {
+  margin-top: 128px;
   font-size: var(--heder-title-font-size);
 }
 
 .header__subtitle {
+  margin-bottom: 128px;
   font-size: var(--heder-subtitle-font-size);
   text-transform: uppercase;
 }
@@ -258,7 +259,12 @@
   position: fixed;
   border: 2px solid #000;
   inset: 0;
-  overflow: hidden;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px
 }
 
 .dialog::backdrop {
@@ -286,14 +292,13 @@
   inline-size: 39px;
 }
 
-.dialog_button {
+.dialog__button {
   font-family: var(--accent-font, sans-serif);
   font-size: var(--main-font-size-small, 14px);
   font-weight: var(--width-main-font-normal, 400);
   text-transform: uppercase;
   line-height: 12.6px;
   letter-spacing: 0%;
-  margin-block-start: 30px;
   inline-size: 293px;
   block-size: 38px;
 }
@@ -301,8 +306,12 @@
 
 /* WIDTH<=375 */
 @media (width <= 375px) {
-  .header__block {
-    max-block-size: 323px;
+  .header__title {
+    margin-top: 100px;
+  }
+  
+  .header__subtitle {
+    margin-bottom: 100px;
   }
 
   .card__list {
@@ -325,6 +334,15 @@
 
   .dialog {
     width: 341px;
+    padding-inline: auto;
+  }
+
+  .dialog_content {
+    inline-size: 257px;
+  }
+
+  .dialog__button {
+    inline-size: 253px;
   }
 }
 /* WIDTH<=375 */
